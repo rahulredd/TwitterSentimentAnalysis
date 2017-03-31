@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="/Users/Rahul/Downloads/Spatial/stanford-corenlp-full-2014-08-27/stanford-corenlp-3.4.1.jar"/>
+	<classpathentry kind="lib" path="/Users/Rahul/Downloads/Spatial/stanford-corenlp-full-2014-08-27/stanford-corenlp-3.4.1-javadoc.jar"/>
+	<classpathentry kind="lib" path="/Users/Rahul/Downloads/Spatial/stanford-corenlp-full-2014-08-27/stanford-corenlp-3.4.1-models.jar"/>
+	<classpathentry kind="lib" path="/Users/Rahul/Downloads/Spatial/stanford-corenlp-full-2014-08-27/ejml-0.23.jar"/>
+	<classpathentry kind="lib" path="/Users/Rahul/Downloads/Spatial/stanford-corenlp-full-2014-08-27/javax.json-api-1.0-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/Rahul/Downloads/Spatial/stanford-corenlp-full-2014-08-27/javax.json.jar"/>
+	<classpathentry kind="lib" path="/Users/Rahul/Downloads/Spatial/stanford-corenlp-full-2014-08-27/joda-time-2.1-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/Rahul/Downloads/Spatial/stanford-corenlp-full-2014-08-27/joda-time.jar"/>
+	<classpathentry kind="lib" path="/Users/Rahul/Downloads/Spatial/stanford-corenlp-full-2014-08-27/jollyday-0.4.7-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/Rahul/Downloads/Spatial/stanford-corenlp-full-2014-08-27/jollyday.jar"/>
+	<classpathentry kind="lib" path="/Users/Rahul/Downloads/Spatial/stanford-corenlp-full-2014-08-27/stanford-corenlp-3.4.1-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/Rahul/Downloads/Spatial/stanford-corenlp-full-2014-08-27/xom-1.2.10-src.jar"/>
+	<classpathentry kind="lib" path="/Users/Rahul/Downloads/Spatial/stanford-corenlp-full-2014-08-27/xom.jar"/>
+	<classpathentry kind="lib" path="/Users/Rahul/Downloads/Spatial/twitter-text-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/Users/Rahul/Downloads/Spatial/stanford-corenlp-full-2016-10-31/slf4j-api.jar"/>
+	<classpathentry kind="lib" path="/Users/Rahul/Downloads/Spatial/stanford-corenlp-full-2016-10-31/slf4j-simple.jar"/>
+	<classpathentry kind="lib" path="/Users/Rahul/Downloads/Spatial/jettison-1.3.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="/Users/Rahul/Downloads/apache-tomcat-7.0.69/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="/Users/Rahul/Downloads/seattle/junit4.jar"/>
+	<classpathentry kind="lib" path="/Users/Rahul/Downloads/Spatial/logback-core-0.9.6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

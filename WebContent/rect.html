@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>fixed grid</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=geometry&key=AIzaSyClP3xAUxlMnQ4UOlOsysMcZVJf6a46YV8"></script>
+<script type="text/javascript">
+	var map;
+	var infowindow = new google.maps.InfoWindow();
+	var rectArr = [];
+	var coordinates = [];
+
+	function initialize() {
+		var rectangle;
+		var boulder = new google.maps.LatLng(40.096469, -105.307662);
+		var myOptions = {
+			zoom : 12,
+			center : boulder,
+			streetViewControl: true,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      scaleControl: true
+		};
+		
+		map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+    console.log(new google.maps.LatLngBounds().getNorthEast().lat());
+		 $(document).ready(function() {
+			drawRects();
+			console.log(coordinates.length);
+      $.ajax({
+        type : "POST",
+        url : "/Spatial/ProcessGrid",
+        data: {"json" : coordinates},
+        datatype : "application/json",        
+        success : function(retData) {
+          
+        }
+      });
+    }); 
+	}
+
+	function drawRects() {
+		var NW = new google.maps.LatLng(40.096469, -105.307662);
+		var width = 12;
+		var height = 15;
+
+		var NS = google.maps.geometry.spherical.computeOffset(NW, 1000, 90)
+		var SS = google.maps.geometry.spherical.computeOffset(NW, 1000, 180)
+		for (var i = 0; i < height; i++) {
+			NE = google.maps.geometry.spherical.computeOffset(NS, i * 1000, 180)
+			SW = google.maps.geometry.spherical.computeOffset(SS, i * 1000, 180)
+			for (var a = 0; a < width; a++) {
+				var tempArr = [];
+				var rectangle = new google.maps.Rectangle();
+				var rectOptions = {
+					strokeColor : "#0000FF",
+					strokeOpacity : 0.5,
+					strokeWeight : 1,
+					map : map,
+					bounds : new google.maps.LatLngBounds(SW, NE)
+				};
+				rectangle.setOptions(rectOptions);
+        rectArr.push(rectangle);
+
+				var ne = rectangle.getBounds().getNorthEast();
+				var sw = rectangle.getBounds().getSouthWest();
+				tempArr.push(ne.lat());
+				tempArr.push(ne.lng());
+				tempArr.push(sw.lat());
+        tempArr.push(sw.lng());
+        coordinates.push(tempArr);
+
+				var SW = google.maps.geometry.spherical.computeOffset(SW, 1000, 90)
+				var NE = google.maps.geometry.spherical.computeOffset(NE, 1000, 90)
+			}
+		}
+	}
+</script>
+</head>
+<body onload="initialize()">
+  <div id="map_canvas" style="width:100%; height:400px"></div>
+</body>
+</html>
