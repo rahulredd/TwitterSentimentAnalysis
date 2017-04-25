@@ -39,6 +39,7 @@ public class RetrieveResults {
 			for (Map.Entry<Integer, Set<String>> set : box.entrySet())  {
 				int index = set.getKey();
 				if (box.get(index).size() > 3) {
+					System.out.println(sentimentCount.get(index) + " " + box.get(index).size());
 					int sentiment = sentimentCount.get(index);
 					int average = sentiment / box.get(index).size();
 					if (maxAverage < average) {
@@ -49,11 +50,10 @@ public class RetrieveResults {
 			}
 		}
 		return maxLoc;
-//		System.out.println(maxLoc + " " + " " + box.get(maxLoc).size() +  " " + box.get(maxLoc) );
-//		System.out.println(maxAverage + " " + sentimentCount);
 	}
 
 	public static void main(String[] args) throws IOException {
 		// Testing
+		GenerateSentiment.init();
 	}
 }

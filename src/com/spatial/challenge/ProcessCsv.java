@@ -23,7 +23,7 @@ public class ProcessCsv {
 			LOG.info("Reading CSV");
 			while ((line = br.readLine()) != null) {
 				//TODO - Testing.Clean up after use 
-				if (count == 20000) {
+				if (count == 1000) {
 					break;
 				}
 				count++;

@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/ProcessGrid")
 public class ProcessGrid extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static final String input = "/Users/Rahul/Documents/workspace/Spatial/boulder_tweets.csv";
+	private static final String input = "/Users/Rahul/Documents/workspace/Spatial/test.csv";
 	private static HashMap<Integer, Integer> sentimentCount = new HashMap<>();
 	private static HashMap<Integer, Set<String>> box = new HashMap<>();
 	/**
