@@ -1,5 +1,5 @@
 # Twitter Sentiment Analysis 
-Generate some basic sentiment analysis on the attached set of tweets for Boulder and find the area with the best average sentiment. Area is defined as a bounding box a quarter mile by a quarter mile (this doesn't have to be the exact best fit, it's ok to subdivide Boulder into rectangles). Average sentiment is the average sentiment score of tweets within the area, with a four tweet minimum. Your output should be the set of tweets from the area with the best average sentiment, and a brief statement of how you did it. Extra credit if you visual your results on a map. You can use an external library to generate the sentiment scores.
+Generate some basic sentiment analysis on the attached set of tweets for Boulder and find the area with the best average sentiment. Area is defined as a bounding box a quarter mile by a quarter mile (this doesn't have to be the exact best fit, it's ok to subdivide Boulder into rectangles). Average sentiment is the average sentiment score of tweets within the area, with a four tweet minimum. Your output should be the set of tweets from the area with the best average sentiment.
 
 ## Steps 
 
